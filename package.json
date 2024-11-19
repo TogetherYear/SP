@@ -1,0 +1,20 @@
+{
+    "name": "application",
+    "version": "0.0.0",
+    "type": "module",
+    "scripts": {
+        "dev": "vite",
+        "prettier": "prettier --write .",
+        "build": "vite build",
+        "postbuild": "node ./Shell/Compress.cjs",
+        "preview": "vite preview"
+    },
+    "devDependencies": {
+        "@types/node": "^20.14.2",
+        "compressing": "^1.10.1",
+        "prettier": "^3.3.3",
+        "sass": "^1.79.4",
+        "typescript": "^5.6.2",
+        "vite": "^5.4.8"
+    }
+}
