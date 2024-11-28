@@ -41,7 +41,14 @@ export default defineConfig(({ command, mode }) => {
             host: '0.0.0.0',
             port: 6768,
             open: true,
-            strictPort: true
+            strictPort: true,
+            /**
+             * 启动 SharedArrayBuffer 打包后 服务端也要配置
+             */
+            headers: {
+                'Cross-Origin-Opener-Policy': 'same-origin',
+                'Cross-Origin-Embedder-Policy': 'require-corp'
+            }
         }
     };
 });
